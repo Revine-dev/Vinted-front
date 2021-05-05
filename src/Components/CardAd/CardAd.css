@@ -1,0 +1,21 @@
+.cards {
+  display: flex;
+}
+
+.cards .card {
+  width: 20%;
+}
+
+.cards .card .picture {
+  height: 150px;
+}
+
+.cards .card:not(:nth-child(6n)):not(:first-of-type) {
+  margin-left: 10px;
+}
+
+.cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
