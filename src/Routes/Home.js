@@ -3,20 +3,21 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import CardAd from "../Components/CardAd";
 
-const Home = () => {
+const Home = ({ search }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://vinted-appli.herokuapp.com/offers/"
+        `https://vinted-appli.herokuapp.com/offers/?title=${search}`
       );
       setData(response.data);
       setIsLoading(false);
     };
+
     fetchData();
-  }, []);
+  }, [search]);
 
   return (
     <>
@@ -24,7 +25,9 @@ const Home = () => {
         <div className="container">
           <div className="header-action">
             <h1 className="title">Prêts à faire du tri dans vos placards ?</h1>
-            <Link to="/">Commencez à vendre</Link>
+            <Link to="/" className="btn">
+              Commencez à vendre
+            </Link>
           </div>
         </div>
       </section>
@@ -33,11 +36,13 @@ const Home = () => {
         {isLoading ? (
           <div className="loading">Chargement en cours...</div>
         ) : (
-          <div className="cards">
-            {data.data.map((ads, i) => {
-              return <CardAd key={i} {...ads} />;
-            })}
-          </div>
+          <>
+            <div className="cards">
+              {data.data.map((ads, i) => {
+                return <CardAd key={i} {...ads} />;
+              })}
+            </div>
+          </>
         )}
       </section>
     </>

@@ -9,6 +9,16 @@
   margin: auto;
 }
 
+body {
+  font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial",
+    sans-serif;
+  color: #333;
+}
+
+body.grey {
+  background: var(--lightgray);
+}
+
 a.btn {
   border-radius: 6px;
   padding: 7px;
@@ -32,6 +42,10 @@ section + section {
 /* -----------------------------*/
 
 header {
+  background: white;
+}
+
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +64,15 @@ header .search {
   padding-top: 5px;
   padding-bottom: 5px;
   width: 500px;
+  position: relative;
+}
+
+header .search svg {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px !important;
 }
 
 header .search input {
@@ -190,21 +213,27 @@ main .header-action a {
   font-weight: bold;
 }
 
+.offer a.btn {
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+}
+
 .offer .saler {
   margin-top: 20px;
   display: flex;
   align-items: center;
 }
 
-.offer .saler:before {
-  content: " ";
-  background: url(http://img.freepik.com/free-icon/user-image-with-black-background_318-34564.jpg?size=338&ext=jpg)
-    no-repeat;
-  background-size: cover;
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
+.saler {
+  vertical-align: middle;
+  display: inline-block !important;
+}
+
+.saler svg {
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
 }
 
 /* ------------------------------

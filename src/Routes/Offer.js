@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Offer = () => {
   const { id } = useParams();
@@ -31,7 +32,10 @@ const Offer = () => {
   ) : (
     <section className="container offer">
       <div className="pictures">
-        <img src={dataAd.product_image.url} alt={dataAd.product_name} />
+        <img
+          src={dataAd.product_image.url.replace(/^http:/, "")}
+          alt={dataAd.product_name}
+        />
       </div>
       <div className="infos">
         <div className="price">{dataAd.product_price} €</div>
@@ -47,7 +51,12 @@ const Offer = () => {
         </div>
         <div className="name">{dataAd.product_name}</div>
         <div className="description">{dataAd.product_description}</div>
-        <div className="saler">{dataAd.owner.account.username}</div>
+        <div className="saler">
+          <FontAwesomeIcon icon="user" /> {dataAd.owner.account.username}
+        </div>
+        <a href="/" className="btn" onClick={(e) => e.preventDefault}>
+          Acheter
+        </a>
       </div>
     </section>
   );
