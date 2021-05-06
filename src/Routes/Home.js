@@ -7,17 +7,34 @@ const Home = ({ search }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const [page, setPage] = useState(1);
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://vinted-appli.herokuapp.com/offers/?title=${search}`
+        `https://vinted-appli.herokuapp.com/offers/?title=${search}&page=${page}`
       );
       setData(response.data);
       setIsLoading(false);
     };
 
     fetchData();
-  }, [search]);
+  }, [search, page]);
+
+  const generatePagination = (pages) => {
+    const result = [];
+    for (let index = 1; index <= pages; index++) {
+      if (index !== page) {
+        result.push(index);
+      }
+    }
+    return result;
+  };
+
+  const goToPage = (e, page) => {
+    e.preventDefault();
+    setPage(page);
+  };
 
   return (
     <>
@@ -37,11 +54,35 @@ const Home = ({ search }) => {
           <div className="loading">Chargement en cours...</div>
         ) : (
           <>
-            <div className="cards">
-              {data.data.map((ads, i) => {
-                return <CardAd key={i} {...ads} />;
-              })}
-            </div>
+            {data.data.length > 0 ? (
+              <div className="cards">
+                {data.data.map((ads, i) => {
+                  return <CardAd key={i} {...ads} />;
+                })}
+              </div>
+            ) : (
+              <div className="notfound">Aucun résultat</div>
+            )}
+
+            {
+              data.pages > 1 && (
+                <div className="pages">
+                  {generatePagination(data.pages).map((page) => {
+                    return (
+                      <a href="/" key={page} onClick={(e) => goToPage(e, page)}>
+                        Page {page}
+                      </a>
+                    );
+                  })}
+                </div>
+              )
+
+              // <div className="pages">
+              //   <a href="/" onClick={goNextPage}>
+              //     Voir les résultats suivants
+              //   </a>
+              // </div>
+            }
           </>
         )}
       </section>

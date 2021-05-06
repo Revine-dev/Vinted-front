@@ -19,7 +19,7 @@ body.grey {
   background: var(--lightgray);
 }
 
-a.btn {
+.btn {
   border-radius: 6px;
   padding: 7px;
   padding-left: 10px;
@@ -27,10 +27,20 @@ a.btn {
   color: white;
   background: var(--logo-green);
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 a.btn:hover {
   text-decoration: none;
+}
+
+button.btn,
+input[type="submit"].btn {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  height: 44px;
+  padding: 0 14px;
 }
 
 section + section {
@@ -120,10 +130,25 @@ main:before {
 
 main .hero.bg-img {
   background: url("https://www.vinted.fr/assets/seller-promotion/default/banner_wide-057c3bafd7e0dbe2f8d69df7e51192d9a15ffd002eca2b01364fb7b08bb9a52d.jpg")
-    no-repeat center 17%;
+    no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 400px;
+  position: relative;
+}
+
+main .hero.bg-img:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://www.vinted.fr/assets/hero-block/tear-cb30a259a261a54b1511a7088e72118801d10d300901837c655cb53add179620.svg");
+  background-position: bottom -1px right -1px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 50%;
 }
 
 main .header-action {
@@ -147,6 +172,11 @@ main .header-action a {
   display: inline-block;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+main .pages {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .loading,
@@ -234,6 +264,104 @@ main .header-action a {
   height: 16px;
   width: 16px;
   margin-right: 5px;
+}
+
+/* ------------------------------
+/*  -------    Auth     -------
+/* -----------------------------*/
+
+.auth h1 {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  color: #111;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+form.auth {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+form.auth input::placeholder {
+  color: #b6b6b6;
+}
+
+form.auth input:not(.btn, input[type="checkbox"]) {
+  font-size: 16px;
+  line-height: 20px;
+  color: #111;
+  font-weight: 400;
+  width: 100%;
+  padding: 0 0 4px;
+  font-family: inherit;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 0;
+  resize: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin-bottom: 20px;
+}
+
+form.auth .newsletter {
+  display: flex;
+  align-items: center;
+}
+
+form.auth input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+form.auth .newsletter label {
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+  font-weight: 400;
+  display: block;
+  margin: 0 0 0 8px;
+}
+
+form.auth .terms {
+  font-size: 12px;
+  line-height: 16px;
+  color: #999;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.auth a {
+  color: var(--lightgreen);
+  font-size: inherit;
+}
+
+form.auth input[type="submit"] + a {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+form.auth .error {
+  display: block;
+  background: rgba(240, 62, 83, 0.8);
+  padding: 5px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 3px;
 }
 
 /* ------------------------------

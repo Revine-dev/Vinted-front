@@ -1,8 +1,9 @@
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Cookies from "js-cookie";
 
-const Header = ({ setSearch }) => {
+const Header = ({ setSearch, token, setCookie, sessionName }) => {
   return (
     <header>
       <div className="container">
@@ -21,9 +22,27 @@ const Header = ({ setSearch }) => {
           />
         </form>
         <nav>
-          <Link to="/" className="btn connect">
-            S'inscrire | Se connecter
-          </Link>
+          {!token ? (
+            <>
+              <Link to="/signup" className="btn connect">
+                S'inscrire
+              </Link>
+              <Link to="/login" className="btn connect">
+                Se connecter
+              </Link>
+            </>
+          ) : (
+            <Link
+              to="/"
+              className="btn connect"
+              onClick={() => {
+                Cookies.remove(sessionName);
+                setCookie(false);
+              }}
+            >
+              Se déconnecter
+            </Link>
+          )}
           <Link to="/" className="btn">
             Vends tes articles
           </Link>

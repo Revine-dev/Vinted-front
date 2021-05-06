@@ -54,7 +54,13 @@ const Offer = () => {
         <div className="saler">
           <FontAwesomeIcon icon="user" /> {dataAd.owner.account.username}
         </div>
-        <a href="/" className="btn" onClick={(e) => e.preventDefault}>
+        <a
+          href="/"
+          className="btn"
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
           Acheter
         </a>
       </div>
