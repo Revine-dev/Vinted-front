@@ -24,9 +24,7 @@ const Home = ({ search }) => {
   const generatePagination = (pages) => {
     const result = [];
     for (let index = 1; index <= pages; index++) {
-      if (index !== page) {
-        result.push(index);
-      }
+      result.push(index);
     }
     return result;
   };
@@ -64,25 +62,23 @@ const Home = ({ search }) => {
               <div className="notfound">Aucun résultat</div>
             )}
 
-            {
-              data.pages > 1 && (
-                <div className="pages">
-                  {generatePagination(data.pages).map((page) => {
-                    return (
-                      <a href="/" key={page} onClick={(e) => goToPage(e, page)}>
-                        Page {page}
-                      </a>
-                    );
-                  })}
-                </div>
-              )
-
-              // <div className="pages">
-              //   <a href="/" onClick={goNextPage}>
-              //     Voir les résultats suivants
-              //   </a>
-              // </div>
-            }
+            {data.pages > 1 && (
+              <div className="pages">
+                {generatePagination(data.pages).map((pageI) => {
+                  return (
+                    <span key={pageI}>
+                      {pageI === page ? (
+                        <span className="current">Page {pageI}</span>
+                      ) : (
+                        <a href="/" onClick={(e) => goToPage(e, pageI)}>
+                          Page {pageI}
+                        </a>
+                      )}
+                    </span>
+                  );
+                })}
+              </div>
+            )}
           </>
         )}
       </section>

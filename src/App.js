@@ -14,13 +14,13 @@ import Offer from "./Routes/Offer";
 import Footer from "./Components/Footer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faUser, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 import Cookies from "js-cookie";
 import Signup from "./Auth/Signup";
 import Login from "./Auth/Login";
 
 function App() {
-  library.add(faUser, faSearch);
+  library.add(faUser, faSearch, faBars);
   const [search, setSearch] = useState("");
   const [token, setCookie] = useState(Cookies.get("token") || false);
   const cookieSessionName = "token";

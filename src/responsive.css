@@ -1,2 +1,102 @@
+@media (max-width: 1200px) {
+  .container {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
 @media (max-width: 1048px) {
+  main .header-action .title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  main .header-action .title {
+    font-size: 2rem;
+  }
+  header .search {
+    width: 300px;
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+  .cards .card {
+    width: calc((100% / 3) - (30px / 3)) !important;
+  }
+  .cards .card:not(:nth-child(6n)):not(:first-of-type) {
+    margin-left: 0 !important;
+  }
+  .cards .card:not(:nth-child(3n)) {
+    margin-right: 10px;
+  }
+  .offer {
+    flex-direction: column;
+  }
+  .offer .infos {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 750px) {
+  main .header-action .title {
+    font-size: 1.4rem;
+  }
+  header .menu-icon {
+    display: block;
+  }
+  header nav .menu {
+    display: none;
+    position: absolute;
+    top: 44px;
+    background: white;
+    left: 0;
+    width: 100vw;
+    margin-left: -15px;
+    padding: 15px;
+    z-index: 3;
+    height: auto;
+  }
+  header nav a {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+  }
+  header nav a.home {
+    display: block;
+  }
+  header .search {
+    position: absolute;
+    bottom: -44px;
+    width: 100%;
+  }
+  header.search + main {
+    margin-top: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  main .header-action {
+    width: 80%;
+  }
+  .cards .card {
+    width: calc((100% / 2) - (30px / 2)) !important;
+  }
+  .cards .card:not(:nth-child(3n)) {
+    margin-left: 0 !important;
+  }
+  .cards .card:not(:nth-child(2n)) {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards .card {
+    width: 100% !important;
+  }
+  .cards .card:not(:nth-child(2n)) {
+    margin-right: 0 !important;
+  }
 }
