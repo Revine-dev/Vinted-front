@@ -76,7 +76,7 @@
   }
   header .search {
     position: absolute;
-    top: 80px;
+    top: calc(var(--header-size) * 2);
     width: 100%;
   }
   header.search + main {
