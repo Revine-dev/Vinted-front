@@ -80,16 +80,18 @@ const Header = ({
                 </Link>
               </>
             ) : (
-              <Link
-                to="/"
-                className="btn connect"
-                onClick={() => {
-                  Cookies.remove(sessionName);
-                  setCookie(false);
-                }}
-              >
-                Se déconnecter
-              </Link>
+              <>
+                <Link
+                  to="/"
+                  className="btn connect"
+                  onClick={() => {
+                    Cookies.remove(sessionName);
+                    setCookie(false);
+                  }}
+                >
+                  Se déconnecter
+                </Link>
+              </>
             )}
             <Link to="/" className="btn">
               Vends tes articles

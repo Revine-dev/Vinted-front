@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import CardAd from "../Components/CardAd";
 
-const Home = ({ search }) => {
+const Home = ({ search, priceRange }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -12,14 +12,14 @@ const Home = ({ search }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://vinted-appli.herokuapp.com/offers/?title=${search}&page=${page}`
+        `https://vinted-appli.herokuapp.com/offers/?title=${search}&page=${page}&priceMin=${priceRange[0]}&priceMax=${priceRange[1]}`
       );
       setData(response.data);
       setIsLoading(false);
     };
 
     fetchData();
-  }, [search, page]);
+  }, [search, page, priceRange]);
 
   const generatePagination = (pages) => {
     const result = [];

@@ -22,7 +22,7 @@ import Login from "./Auth/Login";
 function App() {
   library.add(faUser, faSearch, faBars);
   const [search, setSearch] = useState("");
-  const [priceRange, setPriceRange] = useState([]);
+  const [priceRange, setPriceRange] = useState([0, 1000]);
   const [token, setCookie] = useState(Cookies.get("token") || false);
   const cookieSessionName = "token";
 
@@ -56,7 +56,7 @@ function App() {
             <Offer logUser={logUser} />
           </Route>
           <Route path="/">
-            <Home search={search} />
+            <Home search={search} priceRange={priceRange} />
           </Route>
         </Switch>
       </main>

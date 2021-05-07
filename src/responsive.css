@@ -57,7 +57,7 @@
   header nav .menu {
     display: none;
     position: absolute;
-    top: 44px;
+    top: var(--header-size);
     background: white;
     left: 0;
     width: 100vw;
@@ -80,7 +80,10 @@
     width: 100%;
   }
   header.search + main {
-    margin-top: 44px;
+    margin-top: var(--header-size);
+  }
+  header .rangePrice {
+    width: 100%;
   }
 }
 
@@ -96,6 +99,14 @@
   }
   .cards .card:not(:nth-child(2n)) {
     margin-right: 10px;
+  }
+  header .rangePrice {
+    width: 100%;
+  }
+  header .rangePrice .range {
+    grid-column: auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

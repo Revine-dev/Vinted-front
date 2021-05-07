@@ -2,6 +2,7 @@
   --lightgreen: #39c0c7;
   --logo-green: #09b1ba;
   --lightgray: rgba(17, 17, 17, 0.08);
+  --header-size: 44px;
 }
 
 .container {
@@ -10,7 +11,7 @@
 }
 
 header.search .filter {
-  height: 44px;
+  height: var(--header-size);
 }
 
 body {
@@ -67,7 +68,7 @@ header .container:not(.filter) {
 }
 
 header .logo {
-  height: 44px;
+  height: var(--header-size);
 }
 
 header .logo > * {
@@ -122,6 +123,22 @@ header a.connect {
 
 header a.connect:hover {
   background: #f9fdfd;
+}
+
+header .rangePrice {
+  display: grid;
+  width: 60%;
+  height: 70%;
+  margin: auto;
+}
+
+header .rangePrice .text-range {
+  text-align: center;
+  align-self: center;
+}
+header .rangePrice .range {
+  grid-column: 2;
+  align-self: end;
 }
 
 /* ------------------------------
