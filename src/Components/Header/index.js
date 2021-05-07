@@ -99,11 +99,11 @@ const Header = ({
           </div>
         </nav>
       </div>
-      <div className="container filter">
-        {token && location.pathname === "/" && (
+      {location.pathname === "/" && (
+        <div className="container filter">
           <Filter priceRange={priceRange} setPriceRange={setPriceRange} />
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };
