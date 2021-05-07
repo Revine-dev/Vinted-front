@@ -9,6 +9,10 @@
   margin: auto;
 }
 
+header.search .filter {
+  height: 44px;
+}
+
 body {
   font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial",
     sans-serif;
