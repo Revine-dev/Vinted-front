@@ -257,6 +257,7 @@ main .pages a {
 
 .offer .details div .content {
   text-transform: capitalize;
+  text-align: right;
 }
 
 .offer .name {
