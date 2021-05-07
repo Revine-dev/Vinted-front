@@ -49,7 +49,8 @@ const Header = ({ setSearch, token, setCookie, sessionName }) => {
         <nav ref={refMenu}>
           <FontAwesomeIcon
             icon="bars"
-            className="menu-icon"
+            height="20"
+            className="fa-w-20 menu-icon"
             onClick={() => {
               setMenuOpen(menuOpen ? false : true);
             }}
