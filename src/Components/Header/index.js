@@ -3,8 +3,16 @@ import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Cookies from "js-cookie";
 import { useState, useEffect, useRef } from "react";
+import Filter from "./Filter";
 
-const Header = ({ setSearch, token, setCookie, sessionName }) => {
+const Header = ({
+  setSearch,
+  token,
+  setCookie,
+  priceRange,
+  setPriceRange,
+  sessionName,
+}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const refMenu = useRef();
   const location = useLocation();
@@ -88,6 +96,11 @@ const Header = ({ setSearch, token, setCookie, sessionName }) => {
             </Link>
           </div>
         </nav>
+      </div>
+      <div className="container filter">
+        {token && location.pathname === "/" && (
+          <Filter priceRange={priceRange} setPriceRange={setPriceRange} />
+        )}
       </div>
     </header>
   );

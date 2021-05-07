@@ -55,7 +55,7 @@ header {
   background: white;
 }
 
-header .container {
+header .container:not(.filter) {
   display: flex;
   justify-content: space-between;
   align-items: center;

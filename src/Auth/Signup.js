@@ -15,6 +15,10 @@ const Signup = ({ logUser }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!email || !password || !username) {
+      return setError("Tous les champs doivent êtres complétés.");
+    }
+
     try {
       const response = await axios.post(
         "https://vinted-appli.herokuapp.com/users/signup",
@@ -38,7 +42,7 @@ const Signup = ({ logUser }) => {
 
   return (
     <section className="container auth">
-      <h1>Signup</h1>
+      <h1>S'inscrire</h1>
       <form className="auth" onSubmit={handleSubmit} method="post">
         <div
           className="error"

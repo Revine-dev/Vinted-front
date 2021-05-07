@@ -76,7 +76,7 @@
   }
   header .search {
     position: absolute;
-    bottom: -44px;
+    top: 80px;
     width: 100%;
   }
   header.search + main {
@@ -105,5 +105,18 @@
   }
   .cards .card:not(:nth-child(2n)) {
     margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 300px) {
+  main .header-action {
+    width: 90%;
+    padding: 10px;
+  }
+  main .header-action .title {
+    font-size: 1.4rem;
+  }
+  main .header-action a {
+    padding: 5px;
   }
 }
