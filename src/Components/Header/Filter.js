@@ -1,3 +1,4 @@
+import React from "react";
 import { Range, getTrackBackground } from "react-range";
 
 const Filter = ({ priceRange, setPriceRange }) => {
