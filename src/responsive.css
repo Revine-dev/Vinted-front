@@ -55,6 +55,7 @@
   }
   header nav .menu {
     display: none;
+    height: 80%;
     position: absolute;
     top: 44px;
     background: white;
