@@ -85,6 +85,20 @@
   header .rangePrice {
     width: 100%;
   }
+
+  .publish .row {
+    flex-direction: column;
+  }
+
+  .publish label {
+    margin-bottom: 10px;
+  }
+
+  .publish label,
+  .newoffer fieldset input:not(.btn, input[type="checkbox"]),
+  .newoffer fieldset textarea {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 600px) {

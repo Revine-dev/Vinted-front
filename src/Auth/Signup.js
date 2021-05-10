@@ -34,7 +34,7 @@ const Signup = ({ logUser }) => {
       }
 
       logUser(response.data.token);
-      return history.push("/");
+      return history.push("/publish");
     } catch (error) {
       alert("Sorry, an error has occured");
     }

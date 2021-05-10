@@ -40,7 +40,7 @@ const Home = ({ search, priceRange }) => {
         <div className="container">
           <div className="header-action">
             <h1 className="title">Prêts à faire du tri dans vos placards ?</h1>
-            <Link to="/" className="btn">
+            <Link to="/publish" className="btn">
               Commencez à vendre
             </Link>
           </div>

@@ -3,7 +3,10 @@ import { useLocation } from "react-router-dom";
 const Footer = () => {
   const location = useLocation();
 
-  if (location.pathname.match(/^\/offer\//)) {
+  if (
+    location.pathname.match(/^\/offer\//) ||
+    location.pathname.match(/^\/publish/)
+  ) {
     document.body.className = "grey";
   } else if (document.body.className === "grey") {
     document.body.removeAttribute("class");

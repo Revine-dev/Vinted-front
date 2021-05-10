@@ -18,6 +18,7 @@ import { faUser, faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 import Cookies from "js-cookie";
 import Signup from "./Auth/Signup";
 import Login from "./Auth/Login";
+import NewOffer from "./Components/NewOffer";
 
 function App() {
   library.add(faUser, faSearch, faBars);
@@ -34,6 +35,11 @@ function App() {
     Cookies.set(cookieSessionName, tokenToSave, { expires: 7 });
   };
 
+  const destroySession = () => {
+    Cookies.remove(cookieSessionName);
+    setCookie(false);
+  };
+
   return (
     <Router>
       <Header
@@ -42,7 +48,7 @@ function App() {
         setCookie={setCookie}
         priceRange={priceRange}
         setPriceRange={setPriceRange}
-        cookieSessionName={cookieSessionName}
+        destroySession={destroySession}
       />
       <main>
         <Switch>
@@ -54,6 +60,9 @@ function App() {
           </Route>
           <Route path="/offer/:id">
             <Offer logUser={logUser} />
+          </Route>
+          <Route name="newOffer" path="/publish">
+            {token ? <NewOffer token={token} /> : <Redirect to="/login" />}
           </Route>
           <Route path="/">
             <Home search={search} priceRange={priceRange} />

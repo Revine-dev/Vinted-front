@@ -110,6 +110,10 @@ header nav {
   font-size: 14px;
 }
 
+header nav .account svg {
+  margin-right: 5px;
+}
+
 header nav a.home {
   display: none;
 }
@@ -333,11 +337,15 @@ form.auth {
   margin-left: auto;
 }
 
-form.auth input::placeholder {
+form.auth input::placeholder,
+form.newoffer input::placeholder,
+form.newoffer textarea::placeholder {
   color: #b6b6b6;
 }
 
-form.auth input:not(.btn, input[type="checkbox"]) {
+form.auth input:not(.btn, input[type="checkbox"]),
+form.newoffer input:not(.btn, input[type="checkbox"]),
+form.newoffer textarea {
   font-size: 16px;
   line-height: 20px;
   color: #111;
@@ -361,7 +369,8 @@ form.auth .newsletter {
   align-items: center;
 }
 
-form.auth input[type="checkbox"] {
+form.auth,
+form.newoffer input[type="checkbox"] {
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -398,7 +407,8 @@ form.auth input[type="submit"] + a {
   margin-top: 20px;
 }
 
-form.auth .error {
+form.auth,
+form.newoffer .error {
   display: block;
   background: rgba(240, 62, 83, 0.8);
   padding: 5px;

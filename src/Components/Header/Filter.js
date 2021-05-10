@@ -7,7 +7,7 @@ const Filter = ({ priceRange, setPriceRange }) => {
 
   return (
     <div className="rangePrice">
-      <div class="text-range">Prix entre : </div>
+      <div className="text-range">Prix entre : </div>
       <div className="range">
         <Range
           step={50}

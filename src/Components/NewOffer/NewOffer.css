@@ -1,0 +1,96 @@
+.publish {
+  margin-top: 20px;
+}
+
+.publish .drag {
+  background: white;
+  padding: 20px;
+  border: 1px dotted black;
+  text-align: center;
+}
+
+.publish .files-preview .text-preview {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.publish .files-preview .img {
+  position: relative;
+  display: inline-block;
+}
+
+.publish .files-preview .img + .img {
+  margin-left: 15px;
+}
+
+.publish .files-preview .img .remove {
+  position: absolute;
+  right: 5px;
+  top: 5%;
+  border: 1px solid lightgray;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.publish .files-preview .img .remove:hover {
+  background: white;
+}
+
+.publish .files-preview img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+fieldset {
+  background: white;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 2px grey;
+  border: 0;
+}
+
+fieldset {
+  margin-top: 20px;
+}
+
+fieldset.drop {
+  padding: 24px;
+}
+
+fieldset label,
+fieldset input,
+fieldset textarea {
+  width: 50%;
+  display: block;
+}
+
+fieldset .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-bottom: 1px solid #ebedee;
+}
+.newoffer fieldset input:not(.btn, input[type="checkbox"]),
+.newoffer fieldset textarea {
+  width: 50%;
+  margin-bottom: 0;
+}
+.newoffer .btn {
+  margin-top: 20px;
+  display: block;
+  float: right;
+}
+
+.error {
+  margin-top: 20px;
+}
