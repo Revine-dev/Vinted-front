@@ -20,10 +20,13 @@ const PayForm = ({ data }) => {
     const stripeToken = stripeResponse.token.id;
 
     try {
-      const response = await axios.post("http://localhost:3100/pay", {
-        stripeToken,
-        data,
-      });
+      const response = await axios.post(
+        "https://vinted-appli.herokuapp.com/pay",
+        {
+          stripeToken,
+          data,
+        }
+      );
 
       if (response.data.status === "succeeded") {
         setCompleted(true);
