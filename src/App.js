@@ -11,6 +11,7 @@ import { useState } from "react";
 import Header from "./Components/Header";
 import Home from "./Routes/Home";
 import Offer from "./Routes/Offer";
+import Pay from "./Routes/Pay";
 import Footer from "./Components/Footer";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -61,7 +62,10 @@ function App() {
           <Route path="/offer/:id">
             <Offer logUser={logUser} />
           </Route>
-          <Route name="newOffer" path="/publish">
+          <Route path="/pay">
+            {token ? <Pay token={token} /> : <Redirect to="/login" />}
+          </Route>
+          <Route path="/publish">
             {token ? <NewOffer token={token} /> : <Redirect to="/login" />}
           </Route>
           <Route path="/">

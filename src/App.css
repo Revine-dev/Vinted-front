@@ -39,6 +39,10 @@ a.btn:hover {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 button.btn,
 input[type="submit"].btn {
   font-size: 16px;
@@ -408,6 +412,7 @@ form.auth input[type="submit"] + a {
 }
 
 form.auth .error,
+form.payment .error,
 form.newoffer .error {
   display: block;
   background: rgba(240, 62, 83, 0.8);
@@ -416,6 +421,52 @@ form.newoffer .error {
   color: white;
   margin-bottom: 20px;
   border-radius: 3px;
+}
+
+.pay {
+  margin-top: 20px;
+  padding: 20px;
+  width: 70%;
+  background: white;
+}
+
+.pay .resume {
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 25px;
+}
+
+.pay .line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay .line + .line {
+  margin-top: 5px;
+}
+
+.pay .line.total {
+  border-top: 1px solid var(--lightgray);
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.pay .subline {
+  margin-bottom: 20px;
+}
+
+.pay .card-pay {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pay .card-pay input {
+  font-size: 16px;
+}
+
+.pay .btn {
+  width: 100%;
 }
 
 /* ------------------------------

@@ -5,6 +5,7 @@ const Footer = () => {
 
   if (
     location.pathname.match(/^\/offer\//) ||
+    location.pathname.match(/^\/pay/) ||
     location.pathname.match(/^\/publish/)
   ) {
     document.body.className = "grey";

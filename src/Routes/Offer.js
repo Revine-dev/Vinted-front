@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Offer = () => {
   const { id } = useParams();
+  const history = useHistory();
   const [dataAd, setDataAd] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -54,11 +55,17 @@ const Offer = () => {
         <div className="saler">
           <FontAwesomeIcon icon="user" /> {dataAd.owner.account.username}
         </div>
+
         <a
           href="/"
           className="btn"
           onClick={(e) => {
             e.preventDefault();
+            history.push("/pay", {
+              id: dataAd._id,
+              name: dataAd.product_name,
+              price: dataAd.product_price,
+            });
           }}
         >
           Acheter

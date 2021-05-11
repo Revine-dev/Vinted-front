@@ -2,7 +2,8 @@ import "./CardAd.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const CardAd = (props) => {
+const CardAd = (props, { sold }) => {
+  console.log(sold);
   return (
     <div className="card">
       <Link to={{ pathname: "offer/" + props._id, state: { ...props } }}>

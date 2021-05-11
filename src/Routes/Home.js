@@ -12,7 +12,7 @@ const Home = ({ search, priceRange }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://vinted-appli.herokuapp.com/offers/?title=${search}&page=${page}&priceMin=${priceRange[0]}&priceMax=${priceRange[1]}`
+        `http://localhost:3100/offers/?title=${search}&page=${page}&priceMin=${priceRange[0]}&priceMax=${priceRange[1]}`
       );
       setData(response.data);
       setIsLoading(false);
@@ -32,6 +32,13 @@ const Home = ({ search, priceRange }) => {
   const goToPage = (e, page) => {
     e.preventDefault();
     setPage(page);
+  };
+
+  const isSold = (offerId) => {
+    const find = data.sold.find((item) => console.log(item));
+
+    console.log(offerId, find);
+    return false;
   };
 
   return (
@@ -55,7 +62,8 @@ const Home = ({ search, priceRange }) => {
             {data.data.length > 0 ? (
               <div className="cards">
                 {data.data.map((ads, i) => {
-                  return <CardAd key={i} {...ads} />;
+                  let sold = isSold(ads._id);
+                  return <CardAd key={i} {...ads} sold={sold} />;
                 })}
               </div>
             ) : (

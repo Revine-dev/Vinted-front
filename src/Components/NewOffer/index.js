@@ -9,11 +9,6 @@ const NewOffer = ({ token }) => {
   const errorDiv = useRef();
   const maxFiles = 1;
 
-  if (!token) {
-    console.log("test");
-    history.push("/login");
-  }
-
   const removeFromState = (value, remove) => {
     const newArray = [];
     for (let i = 0; i < value.length; i++) {
@@ -128,7 +123,7 @@ const NewOffer = ({ token }) => {
                 <p>
                   Glisse les images ici, ou clique pour sélectionner les images
                 </p>
-                <em>(Only images will be accepted)</em>
+                <em>(Uniquement les images seront acceptées)</em>
               </>
             )}
           </div>
