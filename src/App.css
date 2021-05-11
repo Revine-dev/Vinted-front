@@ -307,6 +307,15 @@ main .pages a {
   align-items: center;
 }
 
+.offer .btn.disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+.offer .btn.disabled + .red {
+  color: red;
+  text-align: center;
+}
+
 .saler {
   vertical-align: middle;
   display: inline-block !important;

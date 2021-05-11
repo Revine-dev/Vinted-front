@@ -56,20 +56,35 @@ const Offer = () => {
           <FontAwesomeIcon icon="user" /> {dataAd.owner.account.username}
         </div>
 
-        <a
-          href="/"
-          className="btn"
-          onClick={(e) => {
-            e.preventDefault();
-            history.push("/pay", {
-              id: dataAd._id,
-              name: dataAd.product_name,
-              price: dataAd.product_price,
-            });
-          }}
-        >
-          Acheter
-        </a>
+        {!dataAd.sold ? (
+          <a
+            href="/"
+            className="btn"
+            onClick={(e) => {
+              e.preventDefault();
+              history.push("/pay", {
+                id: dataAd._id,
+                name: dataAd.product_name,
+                price: dataAd.product_price,
+              });
+            }}
+          >
+            Acheter
+          </a>
+        ) : (
+          <>
+            <a
+              href="/"
+              className="btn disabled"
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            >
+              Acheter
+            </a>
+            <div className="red">Ce produit a déjà été acheté.</div>
+          </>
+        )}
       </div>
     </section>
   );

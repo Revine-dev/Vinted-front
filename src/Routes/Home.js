@@ -35,10 +35,8 @@ const Home = ({ search, priceRange }) => {
   };
 
   const isSold = (offerId) => {
-    const find = data.sold.find((item) => console.log(item));
-
-    console.log(offerId, find);
-    return false;
+    const find = data.sold.find((item) => item.offer._id === offerId);
+    return find ? true : false;
   };
 
   return (
