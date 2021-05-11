@@ -369,7 +369,7 @@ form.auth .newsletter {
   align-items: center;
 }
 
-form.auth,
+form.auth input[type="checkbox"],
 form.newoffer input[type="checkbox"] {
   width: 30px;
   height: 30px;
@@ -407,7 +407,7 @@ form.auth input[type="submit"] + a {
   margin-top: 20px;
 }
 
-form.auth,
+form.auth .error,
 form.newoffer .error {
   display: block;
   background: rgba(240, 62, 83, 0.8);
