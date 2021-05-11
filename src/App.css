@@ -236,6 +236,11 @@ main .pages a {
   padding: 30px;
 }
 
+.btn:hover {
+  transition: background 0.2s;
+  background: #07a2aa;
+}
+
 /* ------------------------------
 /*  -------    Offer     -------
 /* -----------------------------*/
