@@ -86,6 +86,10 @@
     width: 100%;
   }
 
+  .pay {
+    width: calc(100% - 30px);
+  }
+
   .publish .row {
     flex-direction: column;
   }
