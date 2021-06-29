@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Vinted
 
-## Available Scripts
+Vinted clone made with React
 
-In the project directory, you can run:
+🗄 Backend : [Checkout the repo](https://github.com/Revine-dev/Vinted)
 
-### `yarn start`
+📱 Responsive : ✅
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+🖥 Languages : 
+[![HTML](https://user-images.githubusercontent.com/59733143/123686859-8b3dd280-d850-11eb-94e7-eb44c8179dcc.png)](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+[![CSS](https://user-images.githubusercontent.com/59733143/123686862-8bd66900-d850-11eb-97c5-1cb2889aaf39.png)](https://developer.mozilla.org/en-US/docs/Glossary/CSS)
+[![REACT](https://user-images.githubusercontent.com/59733143/123792579-0fd83180-d8e1-11eb-992e-529cacb03bf0.png)](https://fr.reactjs.org/)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+🎙 Live version : https://jolly-noether-56e3a6.netlify.app
 
-### `yarn test`
+⚒ Features : List offers, Publish offer, Pay item, Signup, Login
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Overview :
 
-### `yarn build`
+* [Mobile version](#mobile-version)
+* [Computer version](#computer-version)
+* [Offer](#offer)
+* [Publish](#publish)
+* [Pay](#pay)
+* [Signup](#signup)
+* [Login](#login)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Mobile version: 
+![Screenshot 2021-06-29 at 14-57-11 Vinted mobile](https://user-images.githubusercontent.com/59733143/123802957-1e781600-d8ec-11eb-920d-145d16a41704.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Computer version:
+![Screenshot 2021-06-29 at 14-56-44 Vinted](https://user-images.githubusercontent.com/59733143/123802969-21730680-d8ec-11eb-99ef-0a363fd1ed5e.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Offer:
+![Screenshot 2021-06-29 at 15-02-33 Vinted](https://user-images.githubusercontent.com/59733143/123802955-1ddf7f80-d8ec-11eb-975d-0be8792e2787.png)
 
-### `yarn eject`
+## Publish:
+![Screenshot 2021-06-29 at 15-04-47 Vinted](https://user-images.githubusercontent.com/59733143/123802946-1cae5280-d8ec-11eb-9ff5-b0ed55b5fdac.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Pay:
+![recording(2)](https://user-images.githubusercontent.com/59733143/123802934-1a4bf880-d8ec-11eb-8449-98fb7d1314d6.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Signup:
+![Screenshot 2021-06-29 at 15-03-01 Vinted](https://user-images.githubusercontent.com/59733143/123802950-1d46e900-d8ec-11eb-81df-3c054b97dbc6.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Login:
+![Screenshot 2021-06-29 at 15-02-53 Vinted](https://user-images.githubusercontent.com/59733143/123802954-1d46e900-d8ec-11eb-9b6a-bea6bcbe9163.png)
