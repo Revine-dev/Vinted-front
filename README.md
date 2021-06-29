@@ -13,7 +13,7 @@ Vinted clone made with React
 
 🎙 Live version : https://jolly-noether-56e3a6.netlify.app
 
-⚒ Features : List offers, Publish offer, Pay item, Signup, Login
+⚒ Features : List offers, Publish offer, Pagination, Search from filters, Pay item, Signup, Login
 
 ## Overview :
 
