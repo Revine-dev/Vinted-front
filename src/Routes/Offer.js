@@ -12,7 +12,7 @@ const Offer = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://vinted-appli.herokuapp.com/offer/" + id
+        "https://vinted-revine.onrender.com/offer/" + id
       );
       setDataAd(response.data);
       setIsLoading(false);

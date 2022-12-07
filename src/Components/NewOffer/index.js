@@ -83,7 +83,7 @@ const NewOffer = ({ token }) => {
       formData.append("brand", brand);
 
       const response = await axios.post(
-        "https://vinted-appli.herokuapp.com/offer/publish",
+        "https://vinted-revine.onrender.com/offer/publish",
         formData,
         {
           headers: {

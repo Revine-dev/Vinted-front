@@ -12,7 +12,7 @@ const Home = ({ search, priceRange }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        `https://vinted-appli.herokuapp.com/offers/?title=${search}&page=${page}&priceMin=${priceRange[0]}&priceMax=${priceRange[1]}`
+        `https://vinted-revine.onrender.com/offers/?title=${search}&page=${page}&priceMin=${priceRange[0]}&priceMax=${priceRange[1]}`
       );
       setData(response.data);
       setIsLoading(false);

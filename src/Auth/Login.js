@@ -19,7 +19,7 @@ const Login = ({ logUser }) => {
 
     try {
       const response = await axios.post(
-        "https://vinted-appli.herokuapp.com/users/login",
+        "https://vinted-revine.onrender.com/users/login",
         {
           email: email,
           password: password,

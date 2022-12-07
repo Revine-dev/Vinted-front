@@ -18,6 +18,7 @@ body {
   font-family: "Maison Neue", "Helvetica Neue", "Helvetica-Neue", "Arial",
     sans-serif;
   color: #333;
+  background-color: #fff;
 }
 
 body.grey {
@@ -168,7 +169,7 @@ main:before {
 }
 
 main .hero.bg-img {
-  background: url("https://www.vinted.fr/assets/seller-promotion/default/banner_wide-057c3bafd7e0dbe2f8d69df7e51192d9a15ffd002eca2b01364fb7b08bb9a52d.jpg")
+  background: url("https://user-images.githubusercontent.com/59733143/123798349-634d7e00-d8e7-11eb-996d-35d24f87147b.jpg")
     no-repeat center center;
   background-size: cover;
   width: 100%;
@@ -183,7 +184,7 @@ main .hero.bg-img:after {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("https://www.vinted.fr/assets/hero-block/tear-cb30a259a261a54b1511a7088e72118801d10d300901837c655cb53add179620.svg");
+  background-image: url("https://svgshare.com/i/Yb9.svg");
   background-position: bottom -1px right -1px;
   background-repeat: no-repeat;
   background-size: contain;

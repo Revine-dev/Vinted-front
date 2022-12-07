@@ -21,7 +21,7 @@ const PayForm = ({ data }) => {
 
     try {
       const response = await axios.post(
-        "https://vinted-appli.herokuapp.com/pay",
+        "https://vinted-revine.onrender.com/pay",
         {
           stripeToken,
           data,
